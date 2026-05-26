@@ -1,0 +1,61 @@
+# Data
+*.tar.gz
+*.fasta
+*.fa
+*.pdb
+*.cif
+
+# Pipeline outputs
+vegpep_pipeline/
+vegpep_results/
+nutrai_pipeline/
+nutrai_results/
+results/
+checkpoints/
+*.db
+*.sqlite
+
+# Large CSV/JSON outputs
+peptides_hydrolysis.csv
+esm2_top*.json
+binding_*.csv
+boltz2_export/
+export_*/
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb~
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

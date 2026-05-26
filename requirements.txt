@@ -1,0 +1,9 @@
+transformers==4.44.2
+tokenizers>=0.19,<0.20
+torch>=2.1,<2.5
+biopython
+pandas
+matplotlib
+seaborn
+tqdm
+pyyaml
