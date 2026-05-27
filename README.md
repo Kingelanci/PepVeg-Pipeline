@@ -1,4 +1,4 @@
-# VegPep-Pipeline
+# PepVeg-Pipeline
 
 ESM-2-based screening of plant- and fungi-derived peptide libraries against a protein target. Developed for the MDM2 case study.
 
@@ -13,8 +13,8 @@ ESM-2-based screening of plant- and fungi-derived peptide libraries against a pr
 
 ## Notebooks
 
-- `VegPep_Pipeline_v10.ipynb` — full screening pipeline
-- `VegPep_Pipeline_v10_SingleFilter.ipynb` — applies each biochemical filter independently on the raw hydrolysate (six standalone pass counts)
+- `PepVeg_Pipeline_v10.ipynb` — full screening pipeline
+- `PepVeg_Pipeline_v10_SingleFilter.ipynb` — applies each biochemical filter independently on the raw hydrolysate (six standalone pass counts)
 
 ## Requirements
 
