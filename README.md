@@ -16,7 +16,7 @@ ESM-2-based screening of plant- and fungi-derived peptide libraries against a pr
 
 - `PepVeg_Pipeline_v10.ipynb` — full screening pipeline
 - `PepVeg_Pipeline_v10_SingleFilter.ipynb` — applies each biochemical filter independently on the raw hydrolysate (six standalone pass counts)
-- `GROMACS_MD_setup_CHARMM36m.ipynb — GROMACS MD setup and analysis on RunPod GPU
+- `GROMACS_MD_setup_CHARMM36m.ipynb` — GROMACS MD setup and analysis on RunPod GPU
 
 ## Requirements
 
@@ -26,7 +26,7 @@ Python 3.9+, GPU (NVIDIA T4 minimum). Pinned dependencies are installed by STEP 
 
 ## Input
 
-Proteome archive contains FASTA files from UniProt https://zenodo.org/records/20447996
+Proteome archive contains FASTA files from UniProt https://doi.org/10.5281/zenodo.20447996
 
 ## Usage
 
