@@ -10,11 +10,13 @@ ESM-2-based screening of plant- and fungi-derived peptide libraries against a pr
 4. ESM-2 cosine-similarity mining against a reference peptide (`facebook/esm2_t33_650M_UR50D`)
 5. 7-parameter binding score (3 target-specific + 4 generic)
 6. Export of ranked candidates as YAML/FASTA for downstream 3D co-folding
+7. GROMACS molecular dynamics on the target-peptide complex (CHARMM36m, 310 K)
 
 ## Notebooks
 
 - `PepVeg_Pipeline_v10.ipynb` — full screening pipeline
 - `PepVeg_Pipeline_v10_SingleFilter.ipynb` — applies each biochemical filter independently on the raw hydrolysate (six standalone pass counts)
+- `GROMACS_MD_setup_CHARMM36m.ipynb — GROMACS MD setup and analysis on RunPod GPU
 
 ## Requirements
 
@@ -26,9 +28,9 @@ Python 3.9+, GPU (NVIDIA T4 minimum). Pinned dependencies are installed by STEP 
 
 Proteome archives expected in the working directory:
 
-- `db_alimenti.tar.gz`
-- `db_fitoterapici.tar.gz`
-- `db_scarti.tar.gz`
+- db_alimenti.tar.gz
+- db_fitoterapici.tar.gz
+- db_scarti.tar.gz
 
 Each contains FASTA files from UniProt.
 
