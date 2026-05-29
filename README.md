@@ -26,13 +26,7 @@ Python 3.9+, GPU (NVIDIA T4 minimum). Pinned dependencies are installed by STEP 
 
 ## Input
 
-Proteome archives expected in the working directory:
-
-- db_alimenti.tar.gz
-- db_fitoterapici.tar.gz
-- db_scarti.tar.gz
-
-Each contains FASTA files from UniProt.
+Proteome archive contains FASTA files from UniProt https://zenodo.org/records/20447996
 
 ## Usage
 
