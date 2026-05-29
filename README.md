@@ -36,6 +36,11 @@ Proteome archive contains FASTA files from UniProt https://doi.org/10.5281/zenod
 4. Run STEP 0b and select database(s) and target(s) from the interactive menu
 5. Execute the remaining cells in order
 
+## Related WORKSs
+
+This pipeline was developed for MDM2 / SPAFESTWDILK case study. Computational outputs (AF3 benchmark, structure predictions, GROMACS trajectories, MM-PBSA decompositions) are deposited at:
+https://doi.org/10.5281/zenodo.20442427
+
 ## License
 
 MIT.
