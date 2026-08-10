@@ -43,4 +43,4 @@ https://doi.org/10.5281/zenodo.20442427
 
 ## License
 
-MIT.
+GPL v3 
