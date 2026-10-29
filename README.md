@@ -10,6 +10,9 @@ Computational and Structural Biotechnology Journal.
 
 ## What it does
 
+The screening stages below are preceded by AF3 assessment on reference binders and
+controls and followed by additional control and mechanistic panels.
+
 `PepVeg_Pipeline_v19.ipynb` runs six stages, in this order:
 
 1. Pharmacophore pre-screening of whole proteins - the F-x(3)-W motif with strict i/i+4
@@ -20,11 +23,13 @@ Computational and Structural Biotechnology Journal.
    hydrophobic fraction
 4. ESM-2 ranking by cosine similarity to a reference peptide
    (`facebook/esm2_t33_650M_UR50D`)
-5. Writes the AlphaFold 3 job files for the top-ranked candidates
-6. Writes the GROMACS inputs for the MD triage
+5. AlphaFold 3 screening of the top-ranked candidates
+6. Export for molecular dynamics
 
-The notebook stops at the job files: co-folding and dynamics are run outside it, on the
-AlphaFold 3 Server and on a GPU, and their results are in the Zenodo record below.
+Co-folding and molecular dynamics run externally. The notebook generates AF3 requests,
+reads returned predictions, applies the screening threshold and reports the control-panel
+analyses. For dynamics it exports complex PDB files and residue ranges for external
+GROMACS preparation.
 
 The instability-index filter and the 7-parameter binding score of v10 are not part of
 v19: the filter was removed and the pipeline rerun. The stage order also differs - v10
@@ -40,24 +45,23 @@ hydrolyses first, v19 applies the pharmacophore first.
 
 ## Requirements
 
-Python 3.9+, GPU (NVIDIA T4 minimum) for the ESM-2 stage. See `requirements.txt`.
-
-`transformers` is pinned to 4.44.2 - newer versions require `torch >= 2.5`.
+A GPU is needed for the ESM-2 stage. The setup cell installs the dependencies it needs;
+`requirements.txt` lists them.
 
 ## Input
 
-Proteome archive: 22 UniProt reference proteomes, https://doi.org/10.5281/zenodo.20447996
+Proteome archive: 22 plant and fungal proteomes assembled from UniProt,
+https://doi.org/10.5281/zenodo.20447996
 
 ## Usage
 
-1. Download the proteome archive and place it where the notebook can read it
-2. Open `PepVeg_Pipeline_v19.ipynb`. The setup cell mounts Google Drive and reads from a
-   fixed folder: if you are not on Colab, or your archive is elsewhere, set `DATA_DIR` at
-   the top of that cell first
-3. Run the setup cells, then the stage cells in order - each stage reads what the previous
-   one wrote, so they are not interchangeable
-4. Hydrolysis, the physicochemical filter and the ESM-2 stage write checkpoints and can be
-   resumed if a session is interrupted
+1. Run the setup cell, which detects the environment and locates or downloads the
+   proteome archive. Google Drive mounting is optional and off by default.
+2. Run the stage cells in order - each stage reads what the previous one wrote, so they
+   are not interchangeable.
+3. To resume an interrupted run, set `START_CLEAN = False` first. Completed hydrolysis and
+   filtering outputs are reused, interrupted stages restart, and ESM-2 resumes from its
+   latest saved checkpoint.
 
 ## Related works
 
