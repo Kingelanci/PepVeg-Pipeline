@@ -3,8 +3,7 @@
 ESM-2-based screening of plant- and fungi-derived peptide libraries against a defined
 protein-protein interaction interface. Developed for the MDM2 case study (SPAFESTWDILK).
 
-Reported in: Romiti M, Sandri C, Paiola G, Ashtiani M, "SPAFESTWDILK, a
-plant-proteome-database-derived dodecapeptide from Zingiber officinale, as a predicted
+Reported in: Romiti M, Sandri C, Paiola G, Ashtiani M, "SPAFESTWDILK, a Zingiber officinale dodecapeptide identified from plant proteome databases, as a predicted
 MDM2-binding peptide: computational discovery and multi-method evaluation",
 Computational and Structural Biotechnology Journal.
 
